@@ -6,6 +6,8 @@ const userRoutes = require('./routes/users');
 const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/product');
 const cartRoutes = require('./routes/cart');
+const orderRoutes = require('./routes/order');
+
 
 dotenv.config();
 mongoose
@@ -18,6 +20,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
+app.use("/api/order", orderRoutes);
 app.listen(5001, () => {
     console.log('Server is running');
 })

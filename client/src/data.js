@@ -25,55 +25,20 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
-        img: "https://images.freeimages.com/images/large-previews/ec1/self-1428261.jpg",
-        title: "SHIRT STYLE",
-        cat: "shirt"
+        img: "https://media.istockphoto.com/id/1314415272/photo/always-smile.jpg?s=612x612&w=0&k=20&c=c5r2rnQTOS9ABrXRC8nGyZfydfWQuKr7hN0eizOPCRQ=",
+        title: "T-SHIRTS",
+        cat: "t-shirts"
     },
     {
         id: 2,
-        img: "https://images.freeimages.com/variants/8SVvdU5GttbYGpobWjvZjSyb/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d",
-        title: "LOUNGE WEAR STYLE",
-        cat: "lounge"
+        img: "https://media.istockphoto.com/id/1331967655/photo/shot-of-a-young-woman-posing-against-a-grey-background.jpg?s=1024x1024&w=is&k=20&c=BaYv9tpks7OBHye4D7_XxUeMYoEEkOtR-RtpP8iaKB8=",
+        title: "JEANS",
+        cat: "jeans"
     },
     {
         id: 3,
-        img: "https://media.istockphoto.com/id/834261596/photo/couple-having-a-fun-in-wet-day.jpg?s=1024x1024&w=is&k=20&c=KD7ewVufRaSFJGbw3mQ_9TmDInu1A57DSXPXqKvkjtU=",
-        title: "LIGHT JACKETS",
-        cat: "jacket"
-    }
-]
-
-export const popularProducts = [
-    {
-        id: 1,
-        img: "https://media.istockphoto.com/id/482948743/photo/blank-white-t-shirt-front-with-clipping-path.jpg?s=1024x1024&w=is&k=20&c=fiLOewhydn9wTfIsvYs-Vzm2qBegYeYD1CSvyadwDpc="
-    },
-    {
-        id: 2,
-        img: "https://media.istockphoto.com/id/594451448/photo/orange-sweater.jpg?s=1024x1024&w=is&k=20&c=Z4iUdZer-9iJAfw2SFDpScF4r9lI6xFq_J0e4wcHnvY="
-    },
-    {
-        id: 3,
-        img: "https://media.istockphoto.com/id/482948743/photo/blank-white-t-shirt-front-with-clipping-path.jpg?s=1024x1024&w=is&k=20&c=fiLOewhydn9wTfIsvYs-Vzm2qBegYeYD1CSvyadwDpc="
-    },
-    {
-        id: 4,
-        img: "https://media.istockphoto.com/id/594451448/photo/orange-sweater.jpg?s=1024x1024&w=is&k=20&c=Z4iUdZer-9iJAfw2SFDpScF4r9lI6xFq_J0e4wcHnvY="
-    },
-    {
-        id: 5,
-        img: "https://media.istockphoto.com/id/482948743/photo/blank-white-t-shirt-front-with-clipping-path.jpg?s=1024x1024&w=is&k=20&c=fiLOewhydn9wTfIsvYs-Vzm2qBegYeYD1CSvyadwDpc="
-    },
-    {
-        id: 6,
-        img: "https://media.istockphoto.com/id/594451448/photo/orange-sweater.jpg?s=1024x1024&w=is&k=20&c=Z4iUdZer-9iJAfw2SFDpScF4r9lI6xFq_J0e4wcHnvY="
-    },
-    {
-        id: 7,
-        img: "https://media.istockphoto.com/id/482948743/photo/blank-white-t-shirt-front-with-clipping-path.jpg?s=1024x1024&w=is&k=20&c=fiLOewhydn9wTfIsvYs-Vzm2qBegYeYD1CSvyadwDpc="
-    },
-    {
-        id: 8,
-        img: "https://media.istockphoto.com/id/594451448/photo/orange-sweater.jpg?s=1024x1024&w=is&k=20&c=Z4iUdZer-9iJAfw2SFDpScF4r9lI6xFq_J0e4wcHnvY="
+        img: "https://media.istockphoto.com/id/1388214557/photo/drinking-beer-on-a-rooftop-and-looking-at-sunset.jpg?s=1024x1024&w=is&k=20&c=P69M1gFq6YIqeR4Aqy9oywYC1rTEgsAptDdM8yzNIFE=",
+        title: "SNEAKERS",
+        cat: "sneakers"
     }
 ]

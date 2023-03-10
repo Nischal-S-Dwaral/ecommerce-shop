@@ -27,16 +27,19 @@ export const categories = [
         id: 1,
         img: "https://images.freeimages.com/images/large-previews/ec1/self-1428261.jpg",
         title: "SHIRT STYLE",
+        cat: "shirt"
     },
     {
         id: 2,
         img: "https://images.freeimages.com/variants/8SVvdU5GttbYGpobWjvZjSyb/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d",
         title: "LOUNGE WEAR STYLE",
+        cat: "lounge"
     },
     {
         id: 3,
         img: "https://media.istockphoto.com/id/834261596/photo/couple-having-a-fun-in-wet-day.jpg?s=1024x1024&w=is&k=20&c=KD7ewVufRaSFJGbw3mQ_9TmDInu1A57DSXPXqKvkjtU=",
         title: "LIGHT JACKETS",
+        cat: "jacket"
     }
 ]
 

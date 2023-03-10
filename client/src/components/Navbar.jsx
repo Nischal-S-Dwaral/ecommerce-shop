@@ -83,33 +83,31 @@ const MenuItem = styled.div `
   })}
 `;
 const Navbar = () => {
-    {
-        return (
-            <Container>
-                <Wrapper>
-                    <Left>
-                        <Language>EN</Language>
-                        <SearchContainer>
-                            <Input placeholder="Search"/>
-                            <Search style={{color:"grey", fontSize:16}}/>
-                        </SearchContainer>
-                    </Left>
-                    <Center>
-                        <Logo>Myntra</Logo>
-                    </Center>
-                    <Right>
-                        <MenuItem>Register</MenuItem>
-                        <MenuItem>Sign In</MenuItem>
-                        <MenuItem>
-                            <Badge badgeContent={4} color="primary" overlap="rectangular">
-                                <ShoppingBasketOutlined/>
-                            </Badge>
-                        </MenuItem>
-                    </Right>
-                </Wrapper>
-            </Container>
-        );
-    }
+    return (
+        <Container>
+            <Wrapper>
+                <Left>
+                    <Language>EN</Language>
+                    <SearchContainer>
+                        <Input placeholder="Search"/>
+                        <Search style={{color:"grey", fontSize:16}}/>
+                    </SearchContainer>
+                </Left>
+                <Center>
+                    <Logo>Myntra</Logo>
+                </Center>
+                <Right>
+                    <MenuItem>Register</MenuItem>
+                    <MenuItem>Sign In</MenuItem>
+                    <MenuItem>
+                        <Badge badgeContent={4} color="primary" overlap="rectangular">
+                            <ShoppingBasketOutlined/>
+                        </Badge>
+                    </MenuItem>
+                </Right>
+            </Wrapper>
+        </Container>
+    );
 }
 
 export default Navbar;

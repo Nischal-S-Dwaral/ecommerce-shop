@@ -4,6 +4,7 @@ import {Search, ShoppingBasketOutlined} from "@material-ui/icons";
 import {Badge} from "@material-ui/core";
 import {mobile} from "../responsive";
 import {useSelector} from "react-redux";
+import {Link} from "react-router-dom";
 
 const Container =styled.div `
   height: 60px;
@@ -104,11 +105,13 @@ const Navbar = () => {
                 <Right>
                     <MenuItem>Register</MenuItem>
                     <MenuItem>Sign In</MenuItem>
-                    <MenuItem>
-                        <Badge badgeContent={quantity} color="primary" overlap="rectangular">
-                            <ShoppingBasketOutlined/>
-                        </Badge>
-                    </MenuItem>
+                    <Link to = "/cart">
+                        <MenuItem>
+                            <Badge badgeContent={quantity} color="primary" overlap="rectangular">
+                                <ShoppingBasketOutlined/>
+                            </Badge>
+                        </MenuItem>
+                    </Link>
                 </Right>
             </Wrapper>
         </Container>

@@ -8,6 +8,8 @@ import {Add, Remove} from "@material-ui/icons";
 import {mobile} from "../responsive";
 import {useLocation} from "react-router-dom";
 import {publicRequest} from "../requestMethods";
+import {addProduct} from "../redux/cartRedux";
+import {useDispatch} from "react-redux";
 
 const Container = styled.div ``;
 
@@ -134,6 +136,8 @@ const Product = () => {
     const [quantity, setQuantity] = useState(1);
     const [color, setColor] = useState("");
     const [size, setSize] = useState("");
+    // useDispatch is a hook to access the redux dispatch function.
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const getProduct = async () => {
@@ -153,6 +157,16 @@ const Product = () => {
         } else {
             setQuantity(quantity + 1);
         }
+    };
+
+    const handleButtonClick = () => {
+        //update the cart, we will be using react redux toolkit here
+        dispatch(addProduct({
+            ...product,
+            quantity,
+            color,
+            size
+        }));
     };
 
     return (
@@ -195,7 +209,7 @@ const Product = () => {
                             <Amount>{quantity}</Amount>
                             <Add onClick={() => handleQuantity("add")}/>
                         </AmountContainer>
-                        <Button>ADD TO CART</Button>
+                        <Button onClick={handleButtonClick}>ADD TO CART</Button>
                     </AddContainer>
                 </InfoContainer>
             </Wrapper>

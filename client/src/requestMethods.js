@@ -1,7 +1,11 @@
 import axios from "axios";
 
 const BASE_URL = "http://localhost:5001/api/";
-const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDc0YjcwMzliZTAxOGIyMjg3N2M2NyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3ODE5OTcyNiwiZXhwIjoxNjc4NDU4OTI2fQ.X_UFsuuX4zqqd6UEbZDiTlZ6X74h_pRvN7qr9ogUEck";
+const TOKEN = () => {
+    if (JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser?.accessToken) {
+        return JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser?.accessToken
+    } else { return '' }
+};
 
 export const publicRequest = axios.create({
     baseURL: BASE_URL

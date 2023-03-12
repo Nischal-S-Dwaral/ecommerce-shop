@@ -7,10 +7,12 @@ const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/product');
 const cartRoutes = require('./routes/cart');
 const orderRoutes = require('./routes/order');
-const stripeRoutes = require('./routes/order');
-const cors = require('cors');
 
 dotenv.config();
+
+const stripeRoutes = require('./routes/stripe');
+
+const cors = require('cors');
 mongoose
     .connect(process.env.MONGO_URL)
     .then(() => {console.log("DB Connection Successful")})

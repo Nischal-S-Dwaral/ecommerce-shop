@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import {mobile} from "../responsive";
+import {login} from "../redux/apiCalls";
+import {useDispatch, useSelector} from "react-redux";
 
 const Container = styled.div `
   width: 100vw;
@@ -51,6 +53,11 @@ const Button = styled.button `
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
+  
+  &:disabled {
+    color: green;
+    cursor: not-allowed;
+  }
 `;
 
 const Link = styled.a `
@@ -60,15 +67,41 @@ const Link = styled.a `
   cursor: pointer;
 `;
 
+const Error = styled.span `
+  color: red;
+`;
 const Login = () => {
+
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
+    const dispatch = useDispatch();
+
+    const {isFetching, error} = useSelector(state => state.user);
+
+    //function to handle login button click
+    const handleLoginButtonClick = (event) => {
+        event.preventDefault(); // prevents the refresh of the page
+        login(dispatch, {username, password});
+    };
+
     return (
         <Container>
             <Wrapper>
                 <Title>SIGN IN</Title>
                 <Form>
-                    <Input type="text" placeholder="Username" />
-                    <Input type="password" placeholder="Password" />
-                    <Button>LOGIN</Button>
+                    <Input type="text" placeholder="Username"
+                           onChange={(e) => setUsername(e.target.value)}
+                    />
+                    <Input type="password" placeholder="Password"
+                           onChange={(p) => setPassword(p.target.value)}
+                    />
+                    <Button
+                        onClick={handleLoginButtonClick}
+                        disabled={isFetching}>
+                        LOGIN
+                    </Button>
+                    {error && <Error>Something went wrong....</Error>}
                     <Link>DON'T REMEMBER YOUR PASSWORD?</Link>
                     <Link>CREATE A NEW ACCOUNT</Link>
                 </Form>
